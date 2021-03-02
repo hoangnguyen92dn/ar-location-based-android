@@ -1,5 +1,6 @@
 package ng.dat.ar;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -19,6 +20,7 @@ import java.util.List;
 /**
  * Created by ntdat on 1/13/17.
  */
+@SuppressLint("ViewConstructor")
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.KITKAT)
 public class ARCamera extends ViewGroup implements SurfaceHolder.Callback {
@@ -212,7 +214,7 @@ public class ARCamera extends ViewGroup implements SurfaceHolder.Callback {
             params.setPreviewSize(previewSize.width, previewSize.height);
             requestLayout();
 
-            camera.setParameters(params);
+//            camera.setParameters(params);
             camera.startPreview();
 
             generateProjectionMatrix();
